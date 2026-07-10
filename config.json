@@ -1,0 +1,7 @@
+{
+    "mode": "local",
+
+    "localServer": "http://localhost:5000",
+
+    "cloudServer": "https://api.hdbusinesssuite.com"
+}

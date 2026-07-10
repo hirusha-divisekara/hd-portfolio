@@ -1,0 +1,553 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <link rel="icon" href="assets/favicon.ico">
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>HD Platform | Inquiries</title>
+
+    <link rel="stylesheet" href="css/admin.css">
+    <link
+rel="stylesheet"
+href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap">
+
+</head>
+
+<body>
+
+    <div class="admin-layout">
+
+    <!-- ==========================
+         SIDEBAR
+    =========================== -->
+
+    <aside class="sidebar">
+
+    <div>
+
+        <div class="logo">
+
+            HD
+
+        </div>
+
+        <div class="brand">
+
+            <h2>HD Platform</h2>
+
+            <span>Business OS</span>
+
+        </div>
+
+    </div>
+
+    <nav class="sidebar-nav">
+
+    <a href="admin.html" class="active">
+
+        <i data-lucide="layout-dashboard"></i>
+
+        <span>Dashboard</span>
+
+    </a>
+
+    <a href="inquiries.html">
+
+        <i data-lucide="inbox"></i>
+
+        <span>Inquiries</span>
+
+    </a>
+
+    <a href="projects.html">
+
+        <i data-lucide="briefcase"></i>
+
+        <span>Projects</span>
+
+    </a>
+
+    <a href="clients.html">
+
+        <i data-lucide="users"></i>
+
+        <span>Clients</span>
+
+    </a>
+
+    <a href="analytics.html">
+
+        <i data-lucide="chart-column"></i>
+
+        <span>Analytics</span>
+
+    </a>
+
+    <a href="calendar.html">
+
+        <i data-lucide="calendar-days"></i>
+
+        <span>Calendar</span>
+
+    </a>
+
+    <a href="settings.html">
+
+        <i data-lucide="settings"></i>
+
+        <span>Settings</span>
+
+    </a>
+
+</nav>
+
+    <div class="sidebar-footer">
+
+        <div class="api-status">
+
+            <span class="dot"></span>
+
+            API Online
+
+        </div>
+
+        <small>HD Platform v1.0</small>
+
+        <button id="logoutBtn" class="logout-btn">
+
+    Logout
+
+</button>
+
+    </div>
+
+</aside>
+
+    <!-- ==========================
+         MAIN CONTENT
+    =========================== -->
+
+    <main class="dashboard">
+
+        <!-- HEADER -->
+
+        <header class="header">
+
+    <div class="header-left">
+
+        <span class="welcome" id="welcomeText">
+
+            Welcome Back
+
+        </span>
+
+        <h1>
+
+            Hirusha 👋
+
+        </h1>
+
+        <p id="currentDate">
+
+            Loading...
+
+        </p>
+
+    </div>
+
+    <div class="header-right">
+
+        <button class="icon-btn notification-btn">
+
+    <i data-lucide="bell"></i>
+
+    <span id="notificationCount" class="notification-count">
+
+        0
+
+    </span>
+
+</button>
+
+        <div class="clock" id="liveClock">
+
+            --:--
+
+        </div>
+
+        <div class="profile">
+
+            <div class="avatar">
+
+                HD
+
+            </div>
+
+            <div>
+
+                <strong>Hirusha</strong>
+
+                <small>Administrator</small>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</header>
+
+        <!-- STATS -->
+
+    <!-- STATS -->
+
+<section class="stats">
+
+    <div class="stat-card">
+
+        <div class="stat-header">
+
+            <div class="stat-icon total">
+
+                <i data-lucide="inbox"></i>
+
+            </div>
+
+            <span class="stat-change positive">
+
+                +12%
+
+            </span>
+
+        </div>
+
+        <h2 id="totalCount">0</h2>
+
+        <p>Total Inquiries</p>
+
+    </div>
+
+    <div class="stat-card">
+
+        <div class="stat-header">
+
+            <div class="stat-icon new">
+
+                <i data-lucide="sparkles"></i>
+
+            </div>
+
+            <span class="stat-change neutral">
+
+                Live
+
+            </span>
+
+        </div>
+
+        <h2 id="newCount">0</h2>
+
+        <p>New Inquiries</p>
+
+    </div>
+
+    <div class="stat-card">
+
+        <div class="stat-header">
+
+            <div class="stat-icon today">
+
+                <i data-lucide="calendar-days"></i>
+
+            </div>
+
+            <span class="stat-change neutral">
+
+                Today
+
+            </span>
+
+        </div>
+
+        <h2 id="todayCount">0</h2>
+
+        <p>Today's Leads</p>
+
+    </div>
+
+    <div class="stat-card">
+
+        <div class="stat-header">
+
+            <div class="stat-icon mail">
+
+                <i data-lucide="mail-check"></i>
+
+            </div>
+
+            <span class="stat-change positive">
+
+                Online
+
+            </span>
+
+        </div>
+
+        <h2>100%</h2>
+
+        <p>Email Service</p>
+
+</div>
+
+</section>
+
+<section class="analytics-row">
+
+    <div class="analytics-card">
+
+        <span>Most Requested Service</span>
+
+        <h3 id="topService">--</h3>
+
+    </div>
+
+    <div class="analytics-card">
+
+    <span>Latest Inquiry</span>
+
+    <h3 id="latestInquiryName">--</h3>
+
+    <p id="latestInquiryService">
+
+        --
+
+    </p>
+
+    <small id="latestInquiryTime">
+
+        --
+
+    </small>
+
+</div>
+
+</section>
+
+<!-- ==========================================
+RECENT ACTIVITY
+========================================== -->
+
+<section class="activity-section">
+
+    <div class="activity-card">
+
+        <h2>
+
+            Recent Activity
+
+        </h2>
+
+        <div id="activityList">
+
+        </div>
+
+    </div>
+
+</section>
+
+<!-- ==========================================
+FILTERS
+========================================== -->
+
+<div class="filter-bar">
+
+    <button class="filter-btn active" data-filter="ALL">
+
+        All
+
+    </button>
+
+    <button class="filter-btn" data-filter="NEW">
+
+        NEW
+
+    </button>
+
+    <button class="filter-btn" data-filter="CONTACTED">
+
+        CONTACTED
+
+    </button>
+
+    <button class="filter-btn" data-filter="IN PROGRESS">
+
+        IN PROGRESS
+
+    </button>
+
+    <button class="filter-btn" data-filter="COMPLETED">
+
+        COMPLETED
+
+    </button>
+
+    <button class="filter-btn" data-filter="ARCHIVED">
+
+        ARCHIVED
+
+    </button>
+
+</div>
+
+        <!-- SEARCH -->
+
+        <div class="search">
+
+            <input
+                type="text"
+                id="searchInput"
+                placeholder="Search by name, email, company or service..."
+            >
+
+        </div>
+
+        <!-- INQUIRIES -->
+
+        <div id="inquiries">
+
+        </div>
+
+    </main>
+
+</div>
+
+<script src="https://unpkg.com/lucide@latest"></script>
+
+<script>
+
+lucide.createIcons();
+
+</script>
+
+<!-- ==========================================
+DETAIL DRAWER
+========================================== -->
+<!-- ==========================================
+ADMIN TOAST
+========================================== -->
+
+<div id="adminToast" class="admin-toast">
+
+    <div class="admin-toast-icon">
+
+        ✓
+
+    </div>
+
+    <div>
+
+        <h4 id="adminToastTitle">
+
+            Success
+
+        </h4>
+
+        <p id="adminToastMessage">
+
+            Message
+
+        </p>
+
+    </div>
+
+</div>
+
+<div id="drawerOverlay" class="drawer-overlay"></div>
+
+<div id="detailDrawer" class="drawer">
+
+    <div class="drawer-content">
+
+        <div class="drawer-header">
+
+            <h2>Inquiry Details</h2>
+
+            <button id="closeDrawer" class="close-btn">
+
+                ✕
+
+            </button>
+
+        </div>
+
+        <div id="drawerBody">
+
+        </div>
+
+    </div>
+
+</div>
+
+<!-- ==========================================
+DELETE MODAL
+========================================== -->
+
+<div id="deleteModal" class="delete-modal">
+
+    <div class="delete-card">
+
+        <div class="delete-icon">
+
+            🗑️
+
+        </div>
+
+        <h2>
+
+            Delete Inquiry
+
+        </h2>
+
+        <p>
+
+            Are you sure you want to permanently delete this inquiry?
+
+        </p>
+
+        <div class="delete-actions">
+
+            <button
+                class="action-btn"
+                id="cancelDelete"
+            >
+
+                Cancel
+
+            </button>
+
+            <button
+                class="action-btn danger"
+                id="confirmDelete"
+            >
+
+                Delete
+
+            </button>
+
+        </div>
+
+    </div>
+
+</div>
+
+<script src="js/common.js"></script>
+<script src="js/inquiries.js"></script>
+
+</body>
+
+</html>

@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <link rel="icon" href="assets/favicon.ico">
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>HD Platform Login</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="css/login.css">
+
+</head>
+
+<body>
+
+    <div class="background-glow glow-1"></div>
+    <div class="background-glow glow-2"></div>
+
+    <div class="login-wrapper">
+
+        <div class="login-card">
+
+            <div class="logo">
+
+                HD
+
+            </div>
+
+            <h1>HD Platform</h1>
+
+            <p>Business Operating System</p>
+
+            <form id="loginForm">
+
+                <div class="input-group">
+
+                    <label>Username</label>
+
+                    <input
+                        id="username"
+                        type="text"
+                        placeholder="Enter username"
+                        required
+                    >
+
+                </div>
+
+                <div class="input-group">
+
+                    <label>Password</label>
+
+                    <input
+                        id="password"
+                        type="password"
+                        placeholder="Enter password"
+                        required
+                    >
+
+                </div>
+
+                <button type="submit" id="loginBtn">
+
+                    Login
+
+                </button>
+
+            </form>
+
+        </div>
+
+    </div>
+
+    <script src="js/login.js"></script>
+    <script>
+if (localStorage.getItem("licensed") !== "true") {
+    window.location.href = "activate.html";
+}
+</script>
+
+</body>
+
+</html>

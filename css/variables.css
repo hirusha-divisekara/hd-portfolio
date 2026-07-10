@@ -1,0 +1,66 @@
+/* ===========================================
+   HD.V2 DESIGN SYSTEM
+=========================================== */
+
+:root{
+
+/*========== COLORS ==========*/
+
+--bg:#06070D;
+--surface:#10131C;
+--surface-2:#171C28;
+--surface-3:#1E2535;
+
+--primary:#3B82F6;
+--secondary:#00D4FF;
+--accent:#7C5CFF;
+
+--white:#FFFFFF;
+
+--text:#F8FAFC;
+--text-light:#D6DCE8;
+--text-muted:#94A3B8;
+
+--border:rgba(255,255,255,.08);
+
+--glass:rgba(255,255,255,.05);
+
+--glass-border:rgba(255,255,255,.12);
+
+
+
+/*========== SHADOWS ==========*/
+
+--shadow-sm:0 5px 15px rgba(0,0,0,.15);
+
+--shadow-md:0 15px 35px rgba(0,0,0,.25);
+
+--shadow-lg:0 25px 70px rgba(0,0,0,.35);
+
+--shadow-xl:0 35px 90px rgba(0,0,0,.45);
+
+
+
+/*========== RADIUS ==========*/
+
+--radius-sm:10px;
+
+--radius-md:18px;
+
+--radius-lg:30px;
+
+--radius-xl:50px;
+
+
+
+/*========== TRANSITIONS ==========*/
+
+--transition:.35s ease;
+
+
+
+/*========== CONTAINER ==========*/
+
+--container:1400px;
+
+}

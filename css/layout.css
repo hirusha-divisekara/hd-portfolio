@@ -1,0 +1,153 @@
+/* ==========================================
+   LOCAL FONTS
+========================================== */
+
+@font-face{
+
+font-family:"Inter";
+
+src:url("../assets/fonts/inter/Inter-Regular.ttf");
+
+}
+
+@font-face{
+
+font-family:"Space Grotesk";
+
+src:url("../assets/fonts/space-grotesk/SpaceGrotesk-Regular.ttf");
+
+}
+
+@font-face{
+
+font-family:"JetBrains Mono";
+
+src:url("../assets/fonts/jetbrains-mono/JetBrainsMono-Regular.ttf");
+
+}
+
+/* ==========================================
+   BODY
+========================================== */
+
+body{
+
+background:var(--bg-primary);
+
+color:var(--text-primary);
+
+font-family:var(--font-body);
+
+overflow-x:hidden;
+
+line-height:1.6;
+
+}
+
+/* ==========================================
+   SCROLLBAR
+========================================== */
+
+::-webkit-scrollbar{
+
+width:10px;
+
+}
+
+::-webkit-scrollbar-track{
+
+background:#05070B;
+
+}
+
+::-webkit-scrollbar-thumb{
+
+background:#1A2536;
+
+border-radius:20px;
+
+}
+
+::-webkit-scrollbar-thumb:hover{
+
+background:var(--accent);
+
+}
+
+/* ==========================================
+   SELECTION
+========================================== */
+
+::selection{
+
+background:var(--accent);
+
+color:#fff;
+
+}
+
+/* ==========================================
+   CONTAINER
+========================================== */
+
+.container{
+
+width:min(92%,var(--container));
+
+margin:auto;
+
+}
+
+/* ==========================================
+   SECTION
+========================================== */
+
+section{
+
+padding:var(--section-padding) 0;
+
+position:relative;
+
+}
+
+/* ==========================================
+   VIDEO
+========================================== */
+
+video{
+
+display:block;
+
+width:100%;
+
+}
+
+/* ==========================================
+   BUTTON
+========================================== */
+
+button{
+
+cursor:pointer;
+
+border:none;
+
+background:none;
+
+}
+
+/* ==========================================
+   UTILITIES
+========================================== */
+
+.hide{
+
+display:none;
+
+}
+
+.text-center{
+
+text-align:center;
+
+}

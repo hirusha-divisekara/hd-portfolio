@@ -1,0 +1,365 @@
+/*==========================================
+FOOTER
+==========================================*/
+
+#footer{
+
+    position:relative;
+
+    padding:120px 8% 40px;
+
+    background:linear-gradient(
+        180deg,
+        #06070D 0%,
+        #04050A 100%
+    );
+
+    border-top:1px solid rgba(255,255,255,.08);
+
+    overflow:hidden;
+
+}
+
+#footer::before{
+
+    content:"";
+
+    position:absolute;
+
+    width:650px;
+
+    height:650px;
+
+    right:-250px;
+
+    top:-250px;
+
+    border-radius:50%;
+
+    background:radial-gradient(
+        circle,
+        rgba(59,130,246,.12),
+        transparent 70%
+    );
+
+    filter:blur(80px);
+
+    pointer-events:none;
+
+}
+
+/*==========================================
+TOP
+==========================================*/
+
+.footer-top{
+
+    display:grid;
+
+    grid-template-columns:1.4fr 2fr;
+
+    gap:90px;
+
+    align-items:flex-start;
+
+    margin-bottom:80px;
+
+}
+
+.footer-brand h2{
+
+    font-size:3rem;
+
+    margin-bottom:20px;
+
+    color:var(--text);
+
+}
+
+.footer-brand span{
+
+    color:var(--primary);
+
+}
+
+.footer-description{
+
+    color:var(--text-light);
+
+    line-height:1.9;
+
+    max-width:470px;
+
+    margin-bottom:40px;
+
+}
+
+/*==========================================
+BUTTONS
+==========================================*/
+
+.footer-buttons{
+
+    display:flex;
+
+    gap:18px;
+
+    flex-wrap:wrap;
+
+}
+
+.footer-btn{
+
+    display:inline-flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    padding:15px 30px;
+
+    border-radius:14px;
+
+    text-decoration:none;
+
+    font-weight:600;
+
+    transition:.35s;
+
+}
+
+.footer-btn.primary{
+
+    background:linear-gradient(
+        135deg,
+        var(--primary),
+        var(--secondary)
+    );
+
+    color:#fff;
+
+    box-shadow:0 10px 30px rgba(59,130,246,.35);
+
+}
+
+.footer-btn.secondary{
+
+    background:rgba(255,255,255,.05);
+
+    border:1px solid rgba(255,255,255,.08);
+
+    color:var(--text);
+
+}
+
+.footer-btn:hover{
+
+    transform:translateY(-5px);
+
+}
+
+/*==========================================
+LINKS
+==========================================*/
+
+.footer-links{
+
+    display:grid;
+
+    grid-template-columns:repeat(4,1fr);
+
+    gap:40px;
+
+}
+
+.footer-column h4{
+
+    margin-bottom:24px;
+
+    color:var(--text);
+
+    font-size:1.05rem;
+
+}
+
+.footer-column a{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:12px;
+
+    margin-bottom:16px;
+
+    text-decoration:none;
+
+    color:var(--text-muted);
+
+    transition:.3s;
+
+}
+
+.footer-column a:hover{
+
+    color:var(--primary);
+
+    transform:translateX(6px);
+
+}
+
+.footer-column small{
+
+    color:var(--text-muted);
+
+    font-size:.7rem;
+
+}
+
+/*==========================================
+ICONS
+==========================================*/
+
+.footer-column img{
+
+    width:18px;
+
+    height:18px;
+
+    object-fit:contain;
+
+    opacity:.85;
+
+    transition:.3s;
+
+}
+
+.footer-column a:hover img{
+
+    transform:scale(1.15);
+
+    opacity:1;
+
+}
+
+/*==========================================
+BOTTOM
+==========================================*/
+
+.footer-bottom{
+
+    padding-top:35px;
+
+    border-top:1px solid rgba(255,255,255,.08);
+
+    display:flex;
+
+    justify-content:space-between;
+
+    align-items:center;
+
+    flex-wrap:wrap;
+
+    gap:20px;
+
+}
+
+.footer-bottom p{
+
+    color:var(--text-muted);
+
+}
+
+.footer-bottom-links{
+
+    display:flex;
+
+    gap:30px;
+
+}
+
+.footer-bottom-links a{
+
+    text-decoration:none;
+
+    color:var(--text-muted);
+
+    transition:.3s;
+
+}
+
+.footer-bottom-links a:hover{
+
+    color:var(--primary);
+
+}
+
+/*==========================================
+RESPONSIVE
+==========================================*/
+
+@media(max-width:1200px){
+
+    .footer-top{
+
+        grid-template-columns:1fr;
+
+        gap:60px;
+
+    }
+
+    .footer-links{
+
+        grid-template-columns:repeat(2,1fr);
+
+    }
+
+}
+
+@media(max-width:768px){
+
+    #footer{
+
+        padding:90px 25px 30px;
+
+    }
+
+    .footer-links{
+
+        grid-template-columns:1fr;
+
+        gap:35px;
+
+    }
+
+    .footer-bottom{
+
+        flex-direction:column;
+
+        align-items:flex-start;
+
+    }
+
+    .footer-bottom-links{
+
+        flex-wrap:wrap;
+
+        gap:18px;
+
+    }
+
+    .footer-buttons{
+
+        flex-direction:column;
+
+        width:100%;
+
+    }
+
+    .footer-btn{
+
+        width:100%;
+
+    }
+
+}
