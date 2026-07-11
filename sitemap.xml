@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="https://www.sitemaps.org/schemas/sitemap/0.9">
+
+  <url>
+    <loc>https://hd-portfolio-v1.netlify.app/</loc>
+    <priority>1.0</priority>
+  </url>
+
+  <url>
+    <loc>https://hd-portfolio-v1.netlify.app/projects.html</loc>
+  </url>
+
+  <url>
+    <loc>https://hd-portfolio-v1.netlify.app/websites.html</loc>
+  </url>
+
+  <url>
+    <loc>https://hd-portfolio-v1.netlify.app/smartbill.html</loc>
+  </url>
+
+  <url>
+    <loc>https://hd-portfolio-v1.netlify.app/nova.html</loc>
+  </url>
+
+  <url>
+    <loc>https://hd-portfolio-v1.netlify.app/booking.html</loc>
+  </url>
+
+  <url>
+    <loc>https://hd-portfolio-v1.netlify.app/privacy.html</loc>
+  </url>
+
+  <url>
+    <loc>https://hd-portfolio-v1.netlify.app/terms.html</loc>
+  </url>
+
+</urlset>
