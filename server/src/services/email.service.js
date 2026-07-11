@@ -3,7 +3,7 @@ const { Resend } = require("resend");
 const resend = new Resend(process.env.RESEND_API_KEY);
 
 const sendContactEmail = async (contact) => {
-    await resend.emails.send({
+    const result = await resend.emails.send({
         from: "HD Platform <onboarding@resend.dev>",
         to: process.env.EMAIL_USER,
         subject: `🚀 New Inquiry from ${contact.fullName}`,
@@ -24,6 +24,10 @@ const sendContactEmail = async (contact) => {
             <small>HD Platform</small>
         `
     });
+
+    console.log("RESEND RESULT:", result);
+
+    return result;
 };
 
 module.exports = {
