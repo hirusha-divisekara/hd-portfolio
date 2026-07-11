@@ -33,6 +33,7 @@ const createContact = async (req, res) => {
 
         try {
     await sendContactEmail(contact);
+    console.log("✅ Email function finished");
 } catch (emailError) {
     console.error("Email sending failed:", emailError);
 }
