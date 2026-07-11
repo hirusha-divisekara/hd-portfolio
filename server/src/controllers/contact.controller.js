@@ -31,17 +31,17 @@ const createContact = async (req, res) => {
 
         });
 
-        await sendContactEmail(contact);
+        try {
+    await sendContactEmail(contact);
+} catch (emailError) {
+    console.error("Email sending failed:", emailError);
+}
 
-        return res.status(201).json({
-
-            success: true,
-
-            message: "Inquiry submitted successfully.",
-
-            data: contact
-
-        });
+return res.status(201).json({
+    success: true,
+    message: "Inquiry submitted successfully.",
+    data: contact
+});
 
     }
 
